@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Enums\ReportStatus;
+use App\Enums\SubmissionStatus;
+use App\Enums\WorkProgramStatus;
 use App\Models\Approval;
 use App\Models\FundSubmission;
 use App\Models\FundSubmissionItem;
@@ -10,10 +12,8 @@ use App\Models\Majelis;
 use App\Models\MajelisMembership;
 use App\Models\ProgramReport;
 use App\Models\ReportExpense;
+use App\Models\User;
 use App\Models\WorkProgram;
-use App\Enums\ReportStatus;
-use App\Enums\SubmissionStatus;
-use App\Enums\WorkProgramStatus;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;

@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Database\Factories\MajelisFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class Majelis extends Model
 {
-    /** @use HasFactory<\Database\Factories\MajelisFactory> */
+    /** @use HasFactory<MajelisFactory> */
     use HasFactory;
 
     protected $fillable = ['name', 'code', 'description', 'is_active'];
@@ -29,7 +31,7 @@ class Majelis extends Model
         return $query->whereIn('id', $user->accessibleMajelisIds());
     }
 
-    /** @return BelongsToMany<User, $this, \Illuminate\Database\Eloquent\Relations\Pivot, 'pivot'> */
+    /** @return BelongsToMany<User, $this, Pivot, 'pivot'> */
     public function members(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'majelis_memberships')

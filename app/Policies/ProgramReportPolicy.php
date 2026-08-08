@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\ProgramReport;
 use App\Models\User;
+use App\Models\WorkProgram;
 
 class ProgramReportPolicy
 {
@@ -19,7 +20,7 @@ class ProgramReportPolicy
 
     public function create(User $user): bool
     {
-        return $user->can('create', \App\Models\WorkProgram::class);
+        return $user->can('create', WorkProgram::class);
     }
 
     public function update(User $user, ProgramReport $programReport): bool

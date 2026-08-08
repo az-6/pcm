@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\MajelisMembership;
 use App\Models\Majelis;
+use App\Models\MajelisMembership;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

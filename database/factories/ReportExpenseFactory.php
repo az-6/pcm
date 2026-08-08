@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\ReportExpense;
 use App\Models\ProgramReport;
+use App\Models\ReportExpense;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

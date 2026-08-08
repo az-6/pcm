@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Models\FundSubmissionItem;
 use App\Models\FundSubmission;
+use App\Models\FundSubmissionItem;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

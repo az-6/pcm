@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\FundSubmission;
 use App\Models\User;
+use App\Models\WorkProgram;
 
 class FundSubmissionPolicy
 {
@@ -19,7 +20,7 @@ class FundSubmissionPolicy
 
     public function create(User $user): bool
     {
-        return $user->can('create', \App\Models\WorkProgram::class);
+        return $user->can('create', WorkProgram::class);
     }
 
     public function update(User $user, FundSubmission $fundSubmission): bool
